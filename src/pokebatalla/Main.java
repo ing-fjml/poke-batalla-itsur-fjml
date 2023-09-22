@@ -17,29 +17,21 @@ public class Main {
         // TODO code application logic here
         System.out.println("Hello PokeBatalla!");
         
-        Pikachu p1 = new Pikachu();        
-        p1.tipo = "ELECTRICO";
-        p1.hp = 35;
-        p1.ataque = 55;
-        p1.defensa = 30;
-        p1.nivel = 1;
-        p1.precision = 4;
+        Pikachu p1 = new Pikachu(); //Instanciando       
+        Pikachu p2 = new Pikachu(); //Instanciando               
+        Charmander cha1 = new Charmander();   //Instanciando                     
+        Bullbasaur b1 = new Bullbasaur();//Instanciando
         
-        Charmander cha1 = new Charmander();        
-        cha1.tipo = "FUEGO";
-        cha1.hp = 39;
-        cha1.ataque = 52;
-        cha1.defensa = 43;
-        cha1.nivel = 1;
-        cha1.precision = 4;
         
-        Bullbasaur b1 = new Bullbasaur();
-        b1.tipo = "PLANTA/VENENO";
-        b1.hp = 45;
-        b1.ataque = 49;
-        b1.defensa = 49;
-        b1.nivel = 1;
-        b1.precision = 4;
+        p1.atacar(cha1);
+        p1.atacar(b1);
+        cha1.atacar(b1);
+        b1.atacar(p1);
+        
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(cha1);
+        System.out.println(b1);
         
     }
     
