@@ -9,5 +9,15 @@ package pokebatalla;
  * @author FJML1983
  */
 public class Pikachu  extends Pokemon{
+
+    //Constructor default
+    public Pikachu() {
+        tipo = "ELECTRICO";
+        hp = 35;
+        ataque = 55;
+        defensa = 30;
+        nivel = 1;
+        precision = 4;
+    }    
     
 }
