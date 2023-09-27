@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pokebatalla;
+package mx.edu.itsur.pokebatalla.model;
 
 /**
  *
@@ -10,7 +10,7 @@ package pokebatalla;
  */
 public class Bullbasaur extends Pokemon {
 
-    Bullbasaur() {
+    public Bullbasaur() {
         tipo = "PLANTA/VENENO";
         hp = 45;
         ataque = 49;
@@ -19,4 +19,12 @@ public class Bullbasaur extends Pokemon {
         precision = 4;
     }
 
+    //Constructor alterno 1
+    public Bullbasaur(String nombre){
+        this(); //invocando al constructor default
+        this.nombre = nombre;
+    }
+    
+    
+    
 }
