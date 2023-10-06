@@ -6,11 +6,13 @@ package mx.edu.itsur.pokebatalla;
 
 import mx.edu.itsur.pokebatalla.model.Bullbasaur;
 import mx.edu.itsur.pokebatalla.model.Pikachu;
+import mx.edu.itsur.pokebatalla.model.Articuno;
 import mx.edu.itsur.pokebatalla.model.Charmander;
-
+import mx.edu.itsur.pokebatalla.model.Moltres;
+import mx.edu.itsur.pokebatalla.model.Zapdos;
 /**
  *
- * @author FJML1983
+ * @author Jose Guadalupe Salgado Garcia
  */
 public class Main {
 
@@ -22,16 +24,29 @@ public class Main {
         System.out.println("Hello PokeBatalla!");
         
         Pikachu pikachuSalvaje = new Pikachu();
-        Charmander charmanderSalvaje = new Charmander() ;
+        Charmander charmanderSalvaje = new Charmander();
+        Bullbasaur bullbasaurSalvaje = new Bullbasaur();
+        Articuno articunoSalvaje = new Articuno();
+        Moltres moltresSalvaje = new Moltres();
+        Zapdos zapdosSalvaje = new Zapdos();
         
-        //Realizar la captura del pikachu salvaje
-        pikachuSalvaje.setNombre("Pedro");        
+        //Realizar la captura del pikachu salvaje   
+        pikachuSalvaje.setNombre("Pikachu");
+        charmanderSalvaje.setNombre("Charmander");
+        articunoSalvaje.setNombre("Articuno");
+        zapdosSalvaje.setNombre("Zapdos");
+        
         Pikachu miPikachu = pikachuSalvaje;
+        Articuno miArticuno = articunoSalvaje;
+        Moltres miMoltres = moltresSalvaje;
         
         miPikachu.atacar(charmanderSalvaje);
-        
         miPikachu.atacar(charmanderSalvaje, "ATACKTRUENO");
         
+        miArticuno.atacar1(zapdosSalvaje);
+        miArticuno.atacar(zapdosSalvaje, "RAYOHIELO");
+        
+        miMoltres.atacar2(articunoSalvaje);
+        miMoltres.atacar(articunoSalvaje, "ATAQUEAEREO");
     }
-    
 }
