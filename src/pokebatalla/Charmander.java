@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package pokebatalla;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +15,31 @@ public class Charmander extends Pokemon {
         defensa = 43;
         nivel = 1;
         precision = 4;
+        this.habilidades = new ArrayList<>();
+        this.habilidades.add("ASCUAS");
+        this.habilidades.add("LANZALLAMAS");
     }
     
+    //Constructor alterno 1
+    public Charmander(String nombre){
+        
+        
+        
+        this(); //invocando al constructor default
+        this.nombre = nombre;
+    }
+     public void atacar(Pokemon oponente, String habilidad){
+        if(habilidad.equals("ASCUAS")){
+          
+            System.out.println("Realizando ASCUAS");
+        }
+        else if(habilidad.equals("LANZALLAMAS")){
+            
+            System.out.println("Realizando LANZALLAMAS");            
+        }
+     }
 }
+    
+    
+
+

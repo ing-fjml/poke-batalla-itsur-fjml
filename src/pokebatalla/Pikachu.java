@@ -4,9 +4,11 @@
  */
 package pokebatalla;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author FJML1983
+ * 
  */
 public class Pikachu  extends Pokemon{
 
@@ -18,6 +20,30 @@ public class Pikachu  extends Pokemon{
         defensa = 30;
         nivel = 1;
         precision = 4;
+        this.habilidades = new ArrayList<>();
+        this.habilidades.add("ATACKTRUENO");
+        this.habilidades.add("BOLAVOLTIO");
+        //....
     }    
     
+    //Constructor alterno 1
+    public Pikachu(String nombre){
+        this(); //invocando al constructor default
+        this.nombre = nombre;
+    }
+    
+    public void atacar(Pokemon oponente, String habilidad){
+        if(habilidad.equals("ATACKTRUENO")){
+            //Logica del daño por atacktrueno
+            System.out.println("Realizando ATACKTRUENO");
+        }else if(habilidad.equals("BOLAVOLTIO")){
+            //Logica del daño por BOLAVOLTIO
+            System.out.println("Realizando BOLAVOLTIO");            
+        }
+        //TODO: otras habilidades...
+    }
+   
 }
+        
+    
+
