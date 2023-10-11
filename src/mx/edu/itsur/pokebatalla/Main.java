@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 
 package mx.edu.itsur.pokebatalla;
 
@@ -35,12 +31,12 @@ public class Main {
         
 
         //Realizar la captura del pikachu salvaje
+                 System.out.println("---------------------------------------------------");
         pikachuSalvaje.setNombre("Pedro");        
         Pikachu miPikachu = pikachuSalvaje;
         
         miPikachu.atacar(charmanderSalvaje);
         miPikachu.atacar(charmanderSalvaje, "ATACKTRUENO");
-       
         ///captura de psyduck salvaje 
          psyduckSalvaje.setNombre("panchito");
          Psyduck miPsyduck = psyduckSalvaje;
@@ -50,20 +46,19 @@ public class Main {
              ///captura de Gengar salvaje 
            gengarSalvaje.setNombre("bolita");
          Gengar migengar = gengarSalvaje;
-         
+         System.out.println("---------------------------------------------------");
          //realizando batallas 
           miPsyduck.atacar(charmanderSalvaje);
         miPsyduck.atacar(charmanderSalvaje, "PISTOLAAGUA");
-        
+                 System.out.println("---------------------------------------------------");
           miSnorlax.atacar(pikachuSalvaje);
         miSnorlax.atacar(pikachuSalvaje, "TERRATEMBLOR");
-       
+                System.out.println("---------------------------------------------------");
             migengar.atacar(snorlaxSalvaje);
         migengar.atacar(snorlaxSalvaje, "CARASUSTO");
        
-    }       
+    } 
+}
+
 
     
-
-   
-}
