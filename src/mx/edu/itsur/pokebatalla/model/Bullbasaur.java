@@ -4,26 +4,46 @@
  */
 package mx.edu.itsur.pokebatalla.model;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author FJML1983
+ * @author Fatima Gutierrez Moreno
  */
 public class Bullbasaur extends Pokemon {
 
-    public Bullbasaur() {
-        tipo = "PLANTA/VENENO";
-        hp = 45;
-        ataque = 49;
-        defensa = 49;
-        nivel = 1;
-        precision = 4;
-    }
-
-    //Constructor alterno 1
-    public Bullbasaur(String nombre){
-        this(); //invocando al constructor default
+        public Bullbasaur() {
+        this.tipo = "PLANTA/VENENO";
+        this.hp = 45;
+        this.ataque = 49;
+        this.defensa = 49;
+        this.nivel = 1;
+        this.precision = 4;
+        this.habilidades = new ArrayList<>();
+        this.habilidades.add("TOXICO");
+        this.habilidades.add("DOBLE FILO");
+        
+    }    
+    
+    
+    public Bullbasaur (String nombre){
+        this(); 
         this.nombre = nombre;
     }
+    
+    public void atacar(Pokemon oponente, String habilidad){
+        if(habilidad.equals("TOXICO")){
+           
+            System.out.println("Realizando ATAQUE TOXICO");
+        }else if(habilidad.equals("DOBLE FILO")){
+          
+            System.out.println("Realizando ATAQUE DOBLE FILO");            
+        }
+   
+    }
+    
+
+   
     
     
     
