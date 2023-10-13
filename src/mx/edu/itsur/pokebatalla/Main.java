@@ -7,10 +7,13 @@ package mx.edu.itsur.pokebatalla;
 import mx.edu.itsur.pokebatalla.model.Bullbasaur;
 import mx.edu.itsur.pokebatalla.model.Pikachu;
 import mx.edu.itsur.pokebatalla.model.Charmander;
+import mx.edu.itsur.pokebatalla.model.Clefairy;
+import mx.edu.itsur.pokebatalla.model.Dragonite;
+import mx.edu.itsur.pokebatalla.model.Squirtle;
 
 /**
  *
- * @author FJML1983
+ * @author Fatima Gutierrez Moreno
  */
 public class Main {
 
@@ -23,6 +26,12 @@ public class Main {
         
         Pikachu pikachuSalvaje = new Pikachu();
         Charmander charmanderSalvaje = new Charmander() ;
+        Squirtle squirSalvaje=new  Squirtle ();
+        Clefairy clefaSalvaje=new Clefairy();
+        Dragonite dragoSalvaje=new Dragonite();
+        Bullbasaur bullSalvaje=new Bullbasaur();
+        
+        
         
         //Realizar la captura del pikachu salvaje
         pikachuSalvaje.setNombre("Pedro");        
@@ -31,6 +40,41 @@ public class Main {
         miPikachu.atacar(charmanderSalvaje);
         
         miPikachu.atacar(charmanderSalvaje, "ATACKTRUENO");
+        
+        //Pelea entre  Bullbasaur y Squirtle
+        
+        squirSalvaje.setNombre("AGUITA");
+         Squirtle aguita= squirSalvaje;
+         
+         aguita.atacar(bullSalvaje);
+         aguita.atacar(bullSalvaje, "BURBUJA");
+         
+         bullSalvaje.setNombre("BULLBU");
+         Bullbasaur bullbu=bullSalvaje;
+         
+         bullbu.atacar(aguita);
+         bullbu.atacar(aguita, "DOBLE FILO");
+                 
+         
+         //Pelea entre  Clefairy y Dragonite
+         clefaSalvaje.setNombre("Clef");
+         Clefairy clef=clefaSalvaje;
+         
+         clef.atacar(dragoSalvaje);
+         clef.atacar(dragoSalvaje, "BESO DRENAJE");
+         
+        
+         dragoSalvaje.setNombre("Draco");
+        Dragonite draco=dragoSalvaje;
+         
+        draco.atacar(clefaSalvaje);
+        draco.atacar(clefaSalvaje, "ATAQUE ALA");
+        
+         
+         
+         
+         
+        
         
     }
     
