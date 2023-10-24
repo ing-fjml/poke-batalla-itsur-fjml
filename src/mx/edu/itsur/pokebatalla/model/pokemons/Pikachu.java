@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package mx.edu.itsur.pokebatalla.model;
+package mx.edu.itsur.pokebatalla.model.pokemons;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author FJML1983
+ * @author JORGE OSVIEL ALVAREZ MEDINA
  */
 public class Pikachu  extends Pokemon{
 
@@ -20,9 +20,7 @@ public class Pikachu  extends Pokemon{
         this.defensa = 30;
         this.nivel = 1;
         this.precision = 4;
-        this.habilidades = new ArrayList<>();
-        this.habilidades.add("ATACKTRUENO");
-        this.habilidades.add("BOLAVOLTIO");
+
         //....
     }    
     
