@@ -1,7 +1,7 @@
 package mx.edu.itsur.pokebatalla.model.Pokemons;
 
-import mx.edu.itsur.pokebatalla.model.moves.Picotazo;
-import mx.edu.itsur.pokebatalla.model.moves.GiroFuego;
+import mx.edu.itsur.pokebatalla.model.moves.Ataque_rapido;
+import mx.edu.itsur.pokebatalla.model.moves.ascuas;
 import mx.edu.itsur.pokebatalla.model.moves.Malisioso;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import java.util.ArrayList;
