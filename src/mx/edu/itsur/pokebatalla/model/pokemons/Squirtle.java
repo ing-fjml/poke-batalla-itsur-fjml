@@ -47,10 +47,26 @@ public class Squirtle extends Pokemon {
     }
     
       
-    public void atacar(Pokemon oponente, Squirtle.Movimientos movimientoAUtilizar) {
+     @Override
+    public Enum[] getMovimientos() {
+        return Squirtle.Movimientos.values();
+    }
+
+    @Override
+    public abstract void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Squirtle esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Squirtle.Movimientos movimientoAUtilizar
+                = Squirtle.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado
-        Movimiento instanciaMovimiento;        
+        Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case Burbuja:
                 instanciaMovimiento = new Burbuja();

@@ -23,11 +23,11 @@ public class Dragonite extends Pokemon {
         Ataque_Ala,
         Espejo,
     }
+    
+    
 
     
-    
-    
-    public Dragonite() {
+     public Dragonite() {
         this.tipo = "DRAGÓN/VOLADOR";
         this.hp = 91;
         this.ataque = 134;
@@ -44,11 +44,26 @@ public class Dragonite extends Pokemon {
         this.nombre = nombre;
     }
     
+    @Override
+    public Enum[] getMovimientos() {
+        return Dragonite.Movimientos.values();
+    } 
     
-    public void atacar(Pokemon oponente, Dragonite.Movimientos movimientoAUtilizar) {
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Dragonite esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Dragonite.Movimientos movimientoAUtilizar
+                = Dragonite.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado
-        Movimiento instanciaMovimiento;        
+        Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case Furia_Dragon:
                 instanciaMovimiento = new Furia_Dragon();
@@ -68,6 +83,7 @@ public class Dragonite extends Pokemon {
         //Aplicar el movimiento.
         instanciaMovimiento.utilizar(this, oponente);
     }
+
     
     
 }

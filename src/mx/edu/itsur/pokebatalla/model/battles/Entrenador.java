@@ -9,10 +9,10 @@ import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
 
 /**
  *
- * @author Fatima Gutierrez Moreno
+ * @author fatima gtz
  */
 public class Entrenador {
-    //Atributos
+     //Atributos
     protected List<Pokemon> pokemonsCapturados;
     
     //Metodos

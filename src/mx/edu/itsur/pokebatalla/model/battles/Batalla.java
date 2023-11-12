@@ -6,10 +6,10 @@ package mx.edu.itsur.pokebatalla.model.battles;
 
 /**
  *
- * @author Fatima Gutierrez Moreno
+ * @author fatima gtz
  */
 public class Batalla {
-     //Atributos
+    //Atributos
     protected Entrenador entrenador1;
     protected Entrenador entrenador2;
     protected int turno = 1;
@@ -31,5 +31,4 @@ public class Batalla {
         //5. Se cambia el turno y repite.
         
     }
-    
 }

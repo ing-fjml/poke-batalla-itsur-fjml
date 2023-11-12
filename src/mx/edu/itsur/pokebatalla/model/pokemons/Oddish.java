@@ -47,10 +47,26 @@ public class Oddish extends Pokemon{
     }
     
   
-    public void atacar(Pokemon oponente, Oddish.Movimientos movimientoAUtilizar) {
+    @Override
+    public Enum[] getMovimientos() {
+        return Oddish.Movimientos.values();
+    }
+
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Oddish esta agotado y no puede realizar mas movimientos.");
+            return;
+        }
+
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Oddish.Movimientos movimientoAUtilizar
+                = Oddish.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado
-        Movimiento instanciaMovimiento;        
+        Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case Danza_Petalo:
                 instanciaMovimiento = new Danza_Petalo();

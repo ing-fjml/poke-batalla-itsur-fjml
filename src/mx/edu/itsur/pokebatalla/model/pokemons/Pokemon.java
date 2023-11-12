@@ -4,16 +4,12 @@
  */
 package mx.edu.itsur.pokebatalla.model.pokemons;
 
-import java.util.List;
-import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
-
 /**
  *
  * @author Fatima Gutierrez Moreno
  */
-public class Pokemon {
-
-    //Atributos
+public abstract class Pokemon {
+//Atributos
     protected String tipo;
     protected String nombre;
     protected int nivel;
@@ -21,7 +17,8 @@ public class Pokemon {
     protected int ataque;
     protected int defensa;
     protected double precision;
-
+    protected int xp; 
+    
     Pokemon() {
     }
 
@@ -46,12 +43,17 @@ public class Pokemon {
         this.hp = this.hp - danio;
     }        
     
+    protected abstract void atacar(Pokemon oponente, int ordinalMovimiento );
 
+    //Devolver la lista de movimientos disponibles del pokemon.
+    public abstract Enum[] getMovimientos();
+    
     @Override
     public String toString() {
 
         return this.getClass().getSimpleName() + 
                 "{tipo:" + tipo + " hp:" + hp + "}";
     }
+
 
 }
