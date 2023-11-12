@@ -29,13 +29,13 @@ public class Main {
         Bullbasaur bullb = new Bullbasaur();
                 
         System.out.println("->Pikachu se encuentra con un Charmander y ataca");
-        pika.atacar(charm, Pikachu.Movimientos.IMPACTRUENO);
+        pika.atacar(charm, Pikachu.Movimientos.IMPACTRUENO.ordinal());
         
         System.out.println("->Charmander se molesta y responde ");
-        charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO);
+        charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO.ordinal());
      
         System.out.println("->Bullbasaur se enoja porque atacaron a su amigo Pikachu y...");
-        bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO);
+        bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO.ordinal());
         
         //Pelea creada por la organizadora Fatima :)
         //Despues de la anterior pelea se decidio realizar otro encuentro entre estos
@@ -46,14 +46,14 @@ public class Main {
         Oddish cookie=new Oddish();
         
          System.out.println("->Squirtle se encuentra en el ring con Dragonite y ataca");
-        blue.atacar(turbo, Squirtle.Movimientos.Cascada);
+        blue.atacar(turbo, Squirtle.Movimientos.Cascada.ordinal());
         
          System.out.println("->Dragonite se molesto por ese tremendo golpe y responde ");
-        turbo.atacar(blue, Dragonite.Movimientos.Furia_Dragon);
+        turbo.atacar(blue, Dragonite.Movimientos.Furia_Dragon.ordinal());
         
         System.out.println("->OOOH...Oddish se molesto porque ese movimiento no le parecio justo "
                 + "y interviene en la pelea , esto se puso muy interesante...");
-        cookie.atacar(turbo, Oddish.Movimientos.Danza_Petalo);
+        cookie.atacar(turbo, Oddish.Movimientos.Danza_Petalo.ordinal());
         
         
         
