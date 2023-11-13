@@ -50,6 +50,7 @@ public class Zapdos extends Pokemon{
             return;
         }        
         
+        
         //Obtener el movimiento de acuerdo a su numero ordinal
         Zapdos.Movimientos movimientoAUtilizar = 
                 Zapdos.Movimientos.values()[ordinalMovimiento];
