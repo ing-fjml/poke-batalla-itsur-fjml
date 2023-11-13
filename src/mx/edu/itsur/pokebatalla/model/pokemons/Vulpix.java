@@ -32,22 +32,41 @@ public class Vulpix extends Pokemon{
         this.nombre = nombre;
     }
     
-public void atacar(Pokemon oponente, Vulpix.Movimientos movimientoAUtilizar){
+ @Override
+    public Enum[] getMovimientos() {
+        return Vulpix.Movimientos.values();
+    }    
+    
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Vulpix esta agotado y no puede realizar mas movimientos.");
+            return;
+        }        
+        
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Vulpix.Movimientos movimientoAUtilizar = 
+                Vulpix.Movimientos.values()[ordinalMovimiento];
+        
+        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
-        switch(movimientoAUtilizar) {
+        switch (movimientoAUtilizar) {
             case ATAQUE_RAPIDO:
-                instanciaMovimiento = new Ataque_rapido();
-                break;
-            case ASCUAS:
-                instanciaMovimiento = new Ascuas();
+                instanciaMovimiento = new AtaqueRapido();
                 break;
             case MALISIOSO:
                 instanciaMovimiento = new Malisioso();
                 break;
-            
+            //Otros movimientos aquí...
             default:
                 throw new AssertionError();
         }
+
+        //Aplicar el movimiento
         instanciaMovimiento.utilizar(this, oponente);
+        
     }
+    
 }
