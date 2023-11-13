@@ -35,23 +35,42 @@ public class Zapdos extends Pokemon{
         this();
         this.nombre = nombre;
     }
+
+        @Override
+    public Enum[] getMovimientos() {
+        return Zapdos.Movimientos.values();
+    }    
     
-    public void atacar(Pokemon oponente, Zapdos.Movimientos movimientoAUtilizar){
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Zapdos esta agotado y no puede realizar mas movimientos.");
+            return;
+        }        
+        
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Zapdos.Movimientos movimientoAUtilizar = 
+                Zapdos.Movimientos.values()[ordinalMovimiento];
+        
+        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
-        switch(movimientoAUtilizar) {
+        switch (movimientoAUtilizar) {
             case PICO_TALADRO:
                 instanciaMovimiento = new PicoTaladro();
-                break;
-            case TRUENO:
-                instanciaMovimiento = new Trueno();
                 break;
             case ONDA_TRUENO:
                 instanciaMovimiento = new OndaTrueno();
                 break;
-            
+            //Otros movimientos aquí...
             default:
                 throw new AssertionError();
         }
+
+        //Aplicar el movimiento
         instanciaMovimiento.utilizar(this, oponente);
+        
     }
+    
 }
