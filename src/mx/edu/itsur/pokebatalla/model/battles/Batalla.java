@@ -6,7 +6,7 @@ package mx.edu.itsur.pokebatalla.model.battles;
 
 /**
  *
- * @author FJML1983
+ * @author Francisco Gonzalez Regalado
  */
 public class Batalla {
     //Atributos
@@ -17,8 +17,8 @@ public class Batalla {
 
     //Constructor
     public Batalla(Entrenador entrenador1, Entrenador entrenador2) {
-        this.entrenador1 = entrenador1;
-        this.entrenador2 = entrenador2;
+        this.entrenador1 = LUIS;
+        this.entrenador2 = RED;
     }    
     
     //Metodos
