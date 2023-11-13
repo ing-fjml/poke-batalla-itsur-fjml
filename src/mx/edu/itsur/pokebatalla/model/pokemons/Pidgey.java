@@ -32,25 +32,41 @@ public class Pidgey extends Pokemon{
         this.nombre = nombre;
     }
 
-    public void atacar(Pokemon oponente, Pidgey.Movimientos movimientoAUtilizar){
+     @Override
+    public Enum[] getMovimientos() {
+        return Pidgey.Movimientos.values();
+    }    
+    
+    @Override
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+
+        //Si el pokemon está agotado no podrá realizar nada.
+        if (this.hp <= 0) {
+            System.out.println("Pidgey esta agotado y no puede realizar mas movimientos.");
+            return;
+        }        
+        
+        //Obtener el movimiento de acuerdo a su numero ordinal
+        Pidgey.Movimientos movimientoAUtilizar = 
+                Pidgey.Movimientos.values()[ordinalMovimiento];
+        
+        //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
-        switch(movimientoAUtilizar) {
-            case VIENTO_CORTANTE:
-                instanciaMovimiento = new RayoHielo();
-                break;
-            case ATAQUE_AEREO:
-                instanciaMovimiento = new AtaqueAereo();
+        switch (movimientoAUtilizar) {
+            case  VIENTO_CORTANTE:
+                instanciaMovimiento = new Viento_Cortante();
                 break;
             case SUSTITUTO:
                 instanciaMovimiento = new Sustituto();
                 break;
-
+            //Otros movimientos aquí...
             default:
                 throw new AssertionError();
         }
+
+        //Aplicar el movimiento
         instanciaMovimiento.utilizar(this, oponente);
+        
     }
-
-
-
+    
 }
