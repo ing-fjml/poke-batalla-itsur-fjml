@@ -26,13 +26,13 @@ public class Main {
         Bullbasaur bullb = new Bullbasaur();
                 
         System.out.println("->Pikachu se encuentra con un Charmander y ataca");
-        pika.atacar(charm, Pikachu.Movimientos.IMPACTRUENO);
+        pika.atacar(charm, Pikachu.Movimientos.IMPACTRUENO.ordinal());
         
         System.out.println("->Charmander se molesta y responde ");
-        charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO);
+        charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO.ordinal());
      
         System.out.println("->Bullbasaur se enoja porque atacaron a su amigo Pikachu y...");
-        bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO);
+        bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO.ordinal());
         
     }
     
