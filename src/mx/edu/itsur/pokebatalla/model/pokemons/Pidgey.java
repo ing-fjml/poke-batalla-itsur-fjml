@@ -62,6 +62,7 @@ public class Pidgey extends Pokemon{
             //Otros movimientos aquí...
             default:
                 throw new AssertionError();
+                
         }
 
         //Aplicar el movimiento
