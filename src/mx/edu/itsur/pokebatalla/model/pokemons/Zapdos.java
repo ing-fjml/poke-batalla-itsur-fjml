@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jose Guadalupe Salgado Garcia
+ * @author Francisco Gonzalez Regalado
  */
 public class Zapdos extends Pokemon{
     
