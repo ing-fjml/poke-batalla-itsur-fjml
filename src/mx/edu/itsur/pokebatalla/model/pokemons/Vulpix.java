@@ -6,6 +6,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Malisioso;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author Francisco Gonzalez Regalado
