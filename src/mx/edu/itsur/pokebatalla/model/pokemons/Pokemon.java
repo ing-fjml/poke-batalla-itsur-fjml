@@ -43,7 +43,7 @@ public abstract class Pokemon {
         this.hp = this.hp - danio;
     }        
     
-    protected abstract void atacar(Pokemon oponente, int ordinalMovimiento );
+    public abstract void atacar(Pokemon oponente, int ordinalMovimiento );
 
     //Devolver la lista de movimientos disponibles del pokemon.
     public abstract Enum[] getMovimientos();
@@ -53,6 +53,11 @@ public abstract class Pokemon {
 
         return this.getClass().getSimpleName() + 
                 "{tipo:" + tipo + " hp:" + hp + "}";
+    }
+
+    public int getHp() { 
+        return hp;
+        
     }
 
 

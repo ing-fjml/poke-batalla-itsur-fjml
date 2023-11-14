@@ -66,12 +66,14 @@ public class Bullbasaur extends Pokemon {
 
             //Otros movimientos aquí...
             default:
-                throw new AssertionError();
-            
+                throw new AssertionError();  
         }
-        
+         
+        {
         //instanciaMovimiento.utilizar(this, oponente);
         instanciaMovimiento.utilizar(this, oponente);
     }    
     
+    
+}
 }

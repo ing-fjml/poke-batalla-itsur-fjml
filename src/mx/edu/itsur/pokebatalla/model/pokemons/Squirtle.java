@@ -53,7 +53,7 @@ public class Squirtle extends Pokemon {
     }
 
     @Override
-    public abstract void atacar(Pokemon oponente, int ordinalMovimiento) {
+    public  void atacar(Pokemon oponente, int ordinalMovimiento) {
 
         //Si el pokemon está agotado no podrá realizar nada.
         if (this.hp <= 0) {
