@@ -12,6 +12,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Proteccion;
  */
 public class Snorlax extends Pokemon {
 
+   
     public enum Movimientos {
         MALICIOSO,
         GOLPEKARATE,
@@ -30,9 +31,14 @@ public class Snorlax extends Pokemon {
 
     }
 
-    public void atacar(Pokemon oponente, Snorlax.Movimientos movimientoAUtilizar) {
-
-        //Instanciar el movimiento solicitado
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+   
+        if (this.hp <= 0) {
+            System.out.println("El Pokemon esta agotado y no puede realizar mas movimientos");
+            return;
+        }
+  Snorlax.Movimientos movimientoAUtilizar = Snorlax.Movimientos.values()[ordinalMovimiento];
+    //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
             case MALICIOSO:
@@ -52,6 +58,10 @@ public class Snorlax extends Pokemon {
 
         //Aplicar el movimiento.
         instanciaMovimiento.utilizar(this, oponente);
+    }
+ @Override
+    public Enum[] getMovimientos() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

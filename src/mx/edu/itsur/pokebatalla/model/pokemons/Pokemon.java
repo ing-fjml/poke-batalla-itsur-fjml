@@ -1,4 +1,5 @@
 /*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -9,9 +10,9 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 
 /**
  *
- * @author JORGE OSVIEL ALVAREZ MEDINA
+ * @author JORGE OSVIEL ALVAREZ MEDINA 
  */
-public class Pokemon {
+public abstract class Pokemon {
 
     //Atributos
     protected String tipo;
@@ -21,6 +22,7 @@ public class Pokemon {
     protected int ataque;
     protected int defensa;
     protected double precision;
+    protected int xp;
 
     Pokemon() {
     }
@@ -29,29 +31,40 @@ public class Pokemon {
     public int getNivel() {
         return nivel;
     }
+
     public int getAtaque() {
         return ataque;
-    }    
-    public int getDefensa(){
+    }
+
+    public int getDefensa() {
         return defensa;
     }
     
+    public int getHP() {
+       return hp;
+    }
     //Setters
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    //Métodos 
-    public void recibirDanio(int danio){
-        this.hp = this.hp - danio;
-    }        
     
+    //Métodos 
+    public void recibirDanio(int danio) {
+        this.hp = this.hp - danio;
+    }
+
+    public abstract void atacar(Pokemon oponente, int ordinalMovimiento);
+    //Devolver la lista de movimientos disponibles del pokemon.
+
+    public abstract Enum[] getMovimientos();
 
     @Override
     public String toString() {
 
-        return this.getClass().getSimpleName() + 
-                "{tipo:" + tipo + " hp:" + hp + "}";
+        return this.getClass().getSimpleName()
+                + "{tipo:" + tipo + " hp:" + hp + "}";
     }
+
+    
 
 }

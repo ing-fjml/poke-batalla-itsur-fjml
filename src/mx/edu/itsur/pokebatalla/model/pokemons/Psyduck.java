@@ -33,10 +33,16 @@ public class Psyduck extends Pokemon {
         
     }    
 
-    public void atacar(Pokemon oponente, Psyduck.Movimientos movimientoAUtilizar) {
-
+    public void atacar(Pokemon oponente, int ordinalMovimiento) {
+        
+        if (this.hp <= 0) {
+            System.out.println("El Pokemon esta agotado y no puede realizar mas movimientos");
+            return;
+        }
+  Psyduck.Movimientos movimientoAUtilizar = Psyduck.Movimientos.values()[ordinalMovimiento];
         //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
+        
         switch (movimientoAUtilizar) {
             case CONFUSION:
                 instanciaMovimiento = new Confusion();
@@ -53,8 +59,12 @@ public class Psyduck extends Pokemon {
                 throw new AssertionError();
         }
 
-        //Aplicar el movimiento.
         instanciaMovimiento.utilizar(this, oponente);
+    }
+
+    @Override
+    public Enum[] getMovimientos() {
+        return Psyduck.Movimientos.values();
     }
 
 }
