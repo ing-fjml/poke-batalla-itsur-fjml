@@ -4,11 +4,14 @@
  */
 package mx.edu.itsur.pokebatalla.model.battles;
 
+import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
+
 /**
  *
  * @author Francisco Gonzalez Regalado
  */
 public class Batalla {
+
     //Atributos
     protected Entrenador entrenador1;
     protected Entrenador entrenador2;
@@ -19,15 +22,23 @@ public class Batalla {
     public Batalla(Entrenador entrenador1, Entrenador entrenador2) {
         this.entrenador1 = entrenador1;
         this.entrenador2 = entrenador2;
-    }    
-    
+    }
+
     //Metodos
+
      public void desarrollarBatalla() {
+
+    public void desarrollarBatalla() {
+
         //Variables que se utilizarán
         Entrenador entrenadorEnTurno = null;
         Entrenador entrenadorOponente = null;
 
+
         System.out.println("INICIA LA BATALLA!!!");
+
+        System.out.println("COMINEZA LA BATALLA!!!");
+
         System.out.println(entrenador1.nombre + " V.S. " + entrenador2.nombre);
         System.out.println("-----------------------------------------");
 
@@ -39,7 +50,10 @@ public class Batalla {
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Solamente cuentas con "
                         + entrenador1.getPokemonsCapturados().size()
+
                         + " Elige tu Pokemon!!! ");
+                        + " Elige alguno de ellos!!! ");
+
                 entrenador1.setPokemonActual(null);
             }
         } while (entrenador1.getPokemonActual() == null);
@@ -151,5 +165,4 @@ public class Batalla {
         System.out.println("-----------------------------------------");
 
     }
-   
 }

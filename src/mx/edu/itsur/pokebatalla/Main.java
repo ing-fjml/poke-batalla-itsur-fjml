@@ -4,6 +4,8 @@
  */
 package mx.edu.itsur.pokebatalla;
 
+import mx.edu.itsur.pokebatalla.model.battles.Batalla;
+import mx.edu.itsur.pokebatalla.model.battles.Entrenador;
 import mx.edu.itsur.pokebatalla.model.pokemons.Bullbasaur;
 import mx.edu.itsur.pokebatalla.model.pokemons.Pikachu;
 import mx.edu.itsur.pokebatalla.model.pokemons.Charmander;
@@ -18,21 +20,24 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         System.out.println("Hello PokeBatalla!");
         
+        //Instanciar pokemons
         Pikachu pika = new Pikachu();
         Charmander charm = new Charmander();
         Bullbasaur bullb = new Bullbasaur();
-                
-        System.out.println("->Pikachu se encuentra con un Charmander y ataca");
-        pika.atacar(charm, Pikachu.Movimientos.IMPACTRUENO.ordinal());
         
-        System.out.println("->Charmander se molesta y responde ");
-        charm.atacar(pika, Charmander.Movimientos.ATAQUE_RAPIDO.ordinal());
-     
-        System.out.println("->Bullbasaur se enoja porque atacaron a su amigo Pikachu y...");
-        bullb.atacar(charm, Bullbasaur.Movimientos.LATIGO.ordinal());
+        //Instanciar entrenadores y que capturen pokemons
+        Entrenador ent1 = new Entrenador("Hannia");
+        ent1.capturarPokemon(pika);
+        ent1.capturarPokemon(bullb);
+
+        Entrenador ent2 = new Entrenador("Stacy");
+        ent2.capturarPokemon(charm);
+        
+        //Instanciar batalla e iniciarla.
+        Batalla b = new Batalla(ent1, ent2);
+        b.desarrollarBatalla();
         
     }
     

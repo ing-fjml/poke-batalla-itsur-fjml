@@ -33,6 +33,10 @@ public abstract class Pokemon {
     public int getDefensa(){
         return defensa;
     }
+
+    public int getHp() {
+        return hp;
+    }       
     
     //Setters
     public void setNombre(String nombre) {
@@ -44,7 +48,7 @@ public abstract class Pokemon {
         this.hp = this.hp - danio;
     }        
     
-    protected abstract void atacar(Pokemon oponente, int ordinalMovimiento );
+    public abstract void atacar(Pokemon oponente, int ordinalMovimiento );
 
     //Devolver la lista de movimientos disponibles del pokemon.
     public abstract Enum[] getMovimientos();
