@@ -81,7 +81,7 @@ public class Batalla {
             if (oponente.estaDerrotado()) {
                 System.out.println("El entrenador " + oponente.getNombre() + 
                         " lamentablemente fue  derrotado por este contrincante: " );
-            System.out.println(" ⊹⊹⊹⊹⊹⊹⊹ A LLEGADO A SU FIN ESTA BATALLALA BATALLA⊹⊹⊹⊹⊹⊹⊹  ");
+            System.out.println(" ⊹⊹⊹⊹⊹⊹⊹ A LLEGADO A SU FIN ESTA  PELEA POR LA SUPERVIVENCIA⊹⊹⊹⊹⊹⊹⊹  ");
             batallaFinalizada = true;
             } else {
                 
