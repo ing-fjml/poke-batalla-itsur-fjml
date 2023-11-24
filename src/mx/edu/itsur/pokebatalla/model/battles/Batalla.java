@@ -47,7 +47,7 @@ public class Batalla {
             try {
                 eligeUnPokemon(entrenador2);
             } catch (IndexOutOfBoundsException e) {
-                System.out.println("CUENTAS CON LOS SIGUIENTES POKEMONES:   " 
+                System.out.println("CUENTAS CON LOS SIGUIENTES POKEMONES: " 
                         + entrenador2.getPokemonsCapturados().size() 
                         + "Elige alguno de ellos");
                 entrenador2.setPokemonActual(null);
@@ -67,10 +67,12 @@ public class Batalla {
             }
            
             seleccionaUnAtaque(entrenadorEnTurno, oponente.getPokemonActual());
-            if (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().gethp() <= 0) {
+            if (entrenadorEnTurno.getPokemonActual() == null ||
+                    entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
                 cambiarDePokemon(entrenadorEnTurno);
             }
-            while (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().gethp() <= 0) {
+            while (entrenadorEnTurno.getPokemonActual() == null || 
+                    entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
                     System.out.println("!STOP¡ No des un paso más,"
                             + " deves cambiar tu pokemon actual por otro ya que debe descansar!!!");
                     cambiarDePokemon(entrenadorEnTurno);
@@ -98,7 +100,8 @@ public class Batalla {
 
         }
         System.out.println("");
-        System.out.println("Selecciona a un  pokemon que creas que es mejor " + ent.getNombre() + ":");
+        System.out.println("Selecciona a un  pokemon que creas que es mejor " 
+                + ent.getNombre() + ":");
              System.out.println("♡♡♡♡♡♡♡");
 
         char auxLectura = '0';
@@ -121,7 +124,8 @@ public class Batalla {
         Pokemon pokemonActual = ent.getPokemonActual();
 
         System.out.println("♡♡♡♡♡♡♡♡♡");
-        System.out.println("Seleccione el mejor ataque que sea mejor " + pokemonActual.getClass().getSimpleName() + ":");
+        System.out.println("Seleccione el mejor ataque que sea mejor " + 
+                pokemonActual.getClass().getSimpleName() + ":");
 
         int idx = 1;
 
