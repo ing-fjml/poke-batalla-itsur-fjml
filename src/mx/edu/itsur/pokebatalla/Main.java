@@ -33,6 +33,7 @@ public class Main {
           Entrenador entrenador1 = new Entrenador("J-Hope");
        entrenador1.capturarPokemon(suga);
        entrenador1.capturarPokemon(guason);
+               
        
        Entrenador entrenador2 = new Entrenador("Jungkook");
        entrenador2.capturarPokemon(azul);
