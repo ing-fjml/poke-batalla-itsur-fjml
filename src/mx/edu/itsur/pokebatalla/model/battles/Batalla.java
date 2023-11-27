@@ -35,7 +35,7 @@ public class Batalla {
         Entrenador entrenadorOponente = null;
 
 
-        System.out.println("INICIA LA BATALLA!!!");
+        System.out.println("Que Comienze la Batalla!");
 
         System.out.println("COMINEZA LA BATALLA!!!");
 
