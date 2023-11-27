@@ -20,8 +20,8 @@ public class Batalla {
 
     //Constructor
     public Batalla(Entrenador entrenador1, Entrenador entrenador2) {
-        this.entrenador1 = entrenador1;
-        this.entrenador2 = entrenador2;
+        this.entrenador1 = RED;
+        this.entrenador2 = ASH_KETCHUM;
     }
 
     //Metodos
