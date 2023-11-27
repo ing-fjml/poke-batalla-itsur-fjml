@@ -102,7 +102,7 @@ public class Batalla {
             }
 
             //3. El entrenador en turno selecciona el ataque a utilizar.
-            System.out.println("Cual de los siguientes movimientos desea utilizar?");
+            System.out.println("Que quieres hacer?");
             //entrenadorEnTurno.getPokemonActual().imprimirMovimientos();
             for (Enum movimiento : entrenadorEnTurno.getPokemonActual().getMovimientos()) {
                 System.out.println(movimiento.ordinal() + 1 + " -> "
