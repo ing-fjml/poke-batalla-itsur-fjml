@@ -7,13 +7,15 @@ package mx.edu.itsur.pokebatalla.model.moves;
 /**
  *
  * @author FJML1983
+ * ..
  */
 public class Grunido extends MovimientoEstado {
-        public Grunido() {
+
+    public Grunido() {
         this.tipo = TiposDeMovimiento.NORMAL;
         this.potencia = 0;
         this.precision = 100;
         this.puntosPoder = 40;
 
-    }  
+    }
 }

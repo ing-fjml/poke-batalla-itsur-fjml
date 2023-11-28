@@ -5,12 +5,13 @@
 package mx.edu.itsur.pokebatalla.model.battles;
 
 import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
+import java.io.Serializable;
 
 /**
  *
- * @author FJML1983
+ * @author Brayan Eduardo González Parra-
  */
-public class Batalla {
+public class Batalla implements Serializable {
 
     //Atributos
     protected Entrenador entrenador1;
@@ -30,7 +31,7 @@ public class Batalla {
         Entrenador entrenadorEnTurno = null;
         Entrenador entrenadorOponente = null;
 
-        System.out.println("COMINEZA LA BATALLA!!!");
+        System.out.println("COMIENZA LA BATALLA!!!");
         System.out.println(entrenador1.nombre + " V.S. " + entrenador2.nombre);
         System.out.println("-----------------------------------------");
 
@@ -58,8 +59,6 @@ public class Batalla {
                 entrenador2.setPokemonActual(null);
             }
         } while (entrenador2.getPokemonActual() == null);
-
-       
 
         while (!batallaFinalizada) {
 
@@ -131,7 +130,6 @@ public class Batalla {
 
     private void seleccionarPokemon(Entrenador ent) {
         char auxLectura = '0';
-        //El entrenador selecciona el pokemon a utilizar.            
         System.out.println("Cual de los siguientes Pokemon desea utilizar " + ent.nombre + "?");
         int auxCount = 1;
         for (Pokemon p : ent.getPokemonsCapturados()) {
@@ -145,7 +143,6 @@ public class Batalla {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        //Obtener el pokemon seleccionado de la lista.
         Pokemon pokemonSeleccionado = ent.getPokemonsCapturados()
                 .get(Character.getNumericValue(auxLectura) - 1);
 

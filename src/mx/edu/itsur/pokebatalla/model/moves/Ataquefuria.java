@@ -6,16 +6,15 @@ package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *
- * @author FJML1983
- * ...
+ * @author Brayan Eduardo González Parra-
  */
-public class AtaqueRapido extends MovimientoFisico {
+public class Ataquefuria extends MovimientoEstado {
 
-    public AtaqueRapido() {
+    public Ataquefuria() {
         this.tipo = TiposDeMovimiento.NORMAL;
-        this.potencia = 40;
-        this.precision = 100;
-        this.puntosPoder = 30;
-    }
+        this.potencia = 15;
+        this.precision = 85;
+        this.puntosPoder = 20;
 
+    }
 }

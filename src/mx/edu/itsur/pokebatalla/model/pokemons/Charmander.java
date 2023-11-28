@@ -15,14 +15,14 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 public class Charmander extends Pokemon {
 
     /**
-     * Movimientos que puede realizar el Pokémon
+     * Movimientos que puede realizar el Pokémonn
      */
     public enum Movimientos {
         ATAQUE_RAPIDO,
         GRUNIDO,
         //Otros movimientos...
     }
-    
+
     public Charmander() {
         tipo = "FUEGO";
         hp = 39;
@@ -37,12 +37,12 @@ public class Charmander extends Pokemon {
         this(); //invocando al constructor default
         this.nombre = nombre;
     }
-    
+
     @Override
     public Enum[] getMovimientos() {
         return Charmander.Movimientos.values();
-    }    
-    
+    }
+
     @Override
     public void atacar(Pokemon oponente, int ordinalMovimiento) {
 
@@ -50,12 +50,12 @@ public class Charmander extends Pokemon {
         if (this.hp <= 0) {
             System.out.println("Charmander esta agotado y no puede realizar mas movimientos.");
             return;
-        }        
-        
+        }
+
         //Obtener el movimiento de acuerdo a su numero ordinal
-        Charmander.Movimientos movimientoAUtilizar = 
-                Charmander.Movimientos.values()[ordinalMovimiento];
-        
+        Charmander.Movimientos movimientoAUtilizar
+                = Charmander.Movimientos.values()[ordinalMovimiento];
+
         //Instanciar el movimiento solicitado
         Movimiento instanciaMovimiento;
         switch (movimientoAUtilizar) {
@@ -72,7 +72,7 @@ public class Charmander extends Pokemon {
 
         //Aplicar el movimiento
         instanciaMovimiento.utilizar(this, oponente);
-        
+
     }
-    
+
 }

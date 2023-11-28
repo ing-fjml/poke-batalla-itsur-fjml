@@ -6,17 +6,15 @@ package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *
- * @author FJML1983
- * ..
+ * @author Brayan Eduardo González Parra-
  */
-public class Impactrueno extends MovimientoEspecial {
+public class Hidrobomba extends MovimientoEspecial {
 
-    public Impactrueno() {
-        this.tipo = TiposDeMovimiento.ELECTRICO;
-        this.potencia = 40;
-        this.precision = 100;
-        this.puntosPoder = 30;
+    public Hidrobomba() {
+        this.tipo = Movimiento.TiposDeMovimiento.AGUA;
+        this.potencia = 110;
+        this.precision = 80;
+        this.puntosPoder = 5;
 
     }
-
 }
