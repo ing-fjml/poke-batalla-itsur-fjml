@@ -52,8 +52,6 @@ public class Entrenador {
 
     //Devuelve true cuando todos los Pokemon del entrenador esten Debilitados
 
-    //Devuelve true cuando todos los Pokemon del entrenador tengan 0 HP
-
     public boolean estaDerrotado() 
     {
         int sumaHP = 0;
