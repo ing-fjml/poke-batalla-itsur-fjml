@@ -23,9 +23,7 @@ public class MovimientoEstado extends Movimiento {
         int poderMovimiento = this.puntosPoder; //this.getPoder();
         int defensaObjetivo = objetivo.getDefensa();
         
-        //Calcular el modificador, considerando tipos.
-        double modificador = 1.0; // Modificador base (sin modificaciones)       
-        //if ()... POR HACER, TOMAR EN CUENTA CLASE DE MOVIMIENTO Y TIPO DE POKEMON
+        double modificador = 1.5; 
         
         int danio = (int) (((
                 ((2 * nivelAtacante / 5 + 2) 
