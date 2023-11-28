@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public class Batalla implements Serializable {
 

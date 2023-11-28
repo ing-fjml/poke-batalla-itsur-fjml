@@ -17,7 +17,7 @@ public class MovimientoEspecial extends Movimiento {
     public void utilizar(Pokemon usuario, Pokemon objetivo) {
         System.out.println("APLICANDO MOVIMIENTO ESPECIAL");
 
-        //Calcular el daño
+        //Calcular el dañoo
         int nivelAtacante = usuario.getNivel();
         int ataqueAtacante = usuario.getAtaque();
         int poderMovimiento = this.puntosPoder; //this.getPoder();

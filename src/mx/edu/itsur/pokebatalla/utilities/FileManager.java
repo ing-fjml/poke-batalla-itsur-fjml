@@ -9,7 +9,7 @@ import mx.edu.itsur.pokebatalla.model.battles.Batalla;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public class FileManager {
 

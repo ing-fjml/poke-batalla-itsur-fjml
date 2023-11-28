@@ -16,7 +16,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 public class Pikachu extends Pokemon {
 
     /**
-     * Movimientos que puede realizar el Pokémon
+     * Movimientos que puede realizar el Pokémonn
      */
     public enum Movimientos {
         IMPACTRUENO,

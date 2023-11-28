@@ -13,6 +13,7 @@ import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
  * https://www.wikidex.net/wiki/Movimiento
  *
  * @author FJML1983
+ * ..
  */
 public abstract class Movimiento {
 

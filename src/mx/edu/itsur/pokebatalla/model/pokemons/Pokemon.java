@@ -6,7 +6,7 @@ package mx.edu.itsur.pokebatalla.model.pokemons;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public abstract class Pokemon {
 

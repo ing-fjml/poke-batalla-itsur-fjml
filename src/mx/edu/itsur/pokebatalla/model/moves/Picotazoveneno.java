@@ -6,7 +6,7 @@ package mx.edu.itsur.pokebatalla.model.moves;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public class Picotazoveneno extends MovimientoFisico {
 

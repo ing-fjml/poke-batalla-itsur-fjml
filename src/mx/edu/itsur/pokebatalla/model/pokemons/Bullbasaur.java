@@ -29,7 +29,7 @@ public class Bullbasaur extends Pokemon {
         xp = 64;
     }
 
-    //Constructor alterno 1
+    //Constructor alternoo 1
     public Bullbasaur(String nombre) {
         this(); //invocando al constructor default
         this.nombre = nombre;

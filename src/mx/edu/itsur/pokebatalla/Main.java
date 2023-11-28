@@ -16,7 +16,7 @@ import mx.edu.itsur.pokebatalla.utilities.FileManager;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public class Main {
 

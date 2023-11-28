@@ -11,7 +11,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 
 /**
  *
- * @author Brayan Eduardo González Parra
+ * @author Brayan Eduardo González Parra-
  */
 public class Charmeleon extends Pokemon {
 

@@ -15,7 +15,7 @@ import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 public class Charmander extends Pokemon {
 
     /**
-     * Movimientos que puede realizar el Pokémon
+     * Movimientos que puede realizar el Pokémonn
      */
     public enum Movimientos {
         ATAQUE_RAPIDO,

@@ -17,7 +17,7 @@ public class MovimientoFisico extends Movimiento {
     public void utilizar(Pokemon usuario, Pokemon objetivo) {
         System.out.println("APLICANDO MOVIMIENTO FISICO");
 
-        //Calcular el daño
+        //Calcular el daño.
         int nivelAtacante = usuario.getNivel();
         int ataqueAtacante = usuario.getAtaque();
         int poderMovimiento = this.puntosPoder; //this.getPoder();
