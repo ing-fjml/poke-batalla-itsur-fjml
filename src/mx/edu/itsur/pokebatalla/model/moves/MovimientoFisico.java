@@ -15,7 +15,7 @@ public class MovimientoFisico extends Movimiento {
 
     @Override
     public void utilizar(Pokemon usuario, Pokemon objetivo) {
-        System.out.println("APLICANDO MOVIMIENTO FISICO");
+        System.out.println("APLICANDO ATAQUE FISICO");
 
         //Calcular el daño
         int nivelAtacante = usuario.getNivel();
@@ -24,7 +24,7 @@ public class MovimientoFisico extends Movimiento {
         int defensaObjetivo = objetivo.getDefensa();
         
         //Calcular el modificador, considerando tipos.
-        double modificador = 1.0; // Modificador base (sin modificaciones)       
+        double modificador = 1.5; // Modificador base (sin modificaciones)       
         //if ()... POR HACER, TOMAR EN CUENTA CLASE DE MOVIMIENTO Y TIPO DE POKEMON
         
         int danio = (int) (((
