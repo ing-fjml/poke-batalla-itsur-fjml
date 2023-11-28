@@ -20,19 +20,19 @@ public class Psyduck extends Pokemon {
     @Override
     public Enum[] getMovimientos() {
         return Psyduck.Movimientos.values();
-    }    
-    
+    }
+
     @Override
     public void atacar(Pokemon oponente, int ordinalMovimiento) {
-        
+
         //Si el pokemon está agotado no podrá realizar nada.
         if (this.hp <= 0) {
             System.out.println("Psyduck esta agotado y no puede realizar mas movimientos.");
             return;
-        }        
+        }
 
         //Obtener el movimiento de acuerdo a su numero ordinal
-        Psyduck.Movimientos movimientoAUtilizar 
+        Psyduck.Movimientos movimientoAUtilizar
                 = Psyduck.Movimientos.values()[ordinalMovimiento];
 
         //Instanciar el movimiento solicitado

@@ -16,6 +16,6 @@ public class Impactrueno extends MovimientoEspecial {
         this.precision = 100;
         this.puntosPoder = 30;
 
-    }    
-    
+    }
+
 }

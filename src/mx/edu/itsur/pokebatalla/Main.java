@@ -37,7 +37,7 @@ public class Main {
         ent1.capturarPokemon(bullb);
         ent1.capturarPokemon(blastoiseSalvaje);
 
-        Entrenador ent2 = new Entrenador("Sutanito");
+        Entrenador ent2 = new Entrenador("Brayan");
         ent2.capturarPokemon(charm);
         ent2.capturarPokemon(ekansSalvaje);
         ent2.capturarPokemon(charmeleonSalvaje);
@@ -47,7 +47,7 @@ public class Main {
             //Instanciar batalla e iniciarla.
             Batalla b = new Batalla(ent1, ent2);
             b.desarrollarBatalla();
-            
+
             FileManager.guardarAvance(b);
 
         } catch (Exception e) {
