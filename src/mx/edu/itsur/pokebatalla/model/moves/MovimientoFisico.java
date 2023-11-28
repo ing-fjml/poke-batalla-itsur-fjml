@@ -24,7 +24,7 @@ public class MovimientoFisico extends Movimiento {
         int defensaObjetivo = objetivo.getDefensa();
         
         //Calcular el modificador, considerando tipos.
-        double modificador = 1.5; // Modificador base (sin modificaciones)       
+        double modificador = 1.0; // Modificador base (sin modificaciones)       
         //if ()... POR HACER, TOMAR EN CUENTA CLASE DE MOVIMIENTO Y TIPO DE POKEMON
         
         int danio = (int) (((
