@@ -4,7 +4,7 @@
  */
 package pokebatalla.Movimientos;
 
-import pokebatalla.pookemones.Pokemon;
+import pokebatalla.pokemons.Pokemon;
 /**
  *Esta clase representa nn movimiento o ataque 
  * (Move en inglés; わざ Movimiento en japonés) 
@@ -46,15 +46,12 @@ public class Movimiento {
 
     //Métodos
     public void utilizar(Pokemon usuario, Pokemon objetivo) {
-        //Calcular el daño
-        int nivelAtacante = usuario.getNivel();
+ int nivelAtacante = usuario.getNivel();
         int ataqueAtacante = usuario.getAtaque();
-        int poderMovimiento = this.puntosPoder; //this.getPoder();
+        int poderMovimiento = this.puntosPoder; 
         int defensaObjetivo = objetivo.getDefensa();
-        
-        //Calcular el modificador, considerando tipos.
-        double modificador = 1.0; // Modificador base (sin modificaciones)       
-        //if ()... POR HACER        
+        double modificador = 1.0; 
+           
         
         int danio = (int) (((
                 ((2 * nivelAtacante / 5 + 2) 
@@ -64,13 +61,20 @@ public class Movimiento {
         
         objetivo.recibirDanio(danio); 
 
-        //Imprimir efecto del movimiento en consola
+       
         System.out.println(
                          usuario.getClass().getSimpleName() + " aplica " + 
                          this.getClass().getSimpleName() + " a " +  
                          objetivo.getClass().getSimpleName() + " y causa danio de " +
                          danio);
+        
+        
+        if(objetivo.gethp()<=0)
+        {
+            System.out.println("El objetivo quedo asi: " + "0");
+        }
         System.out.println("El objetivo quedo asi: " + objetivo);
+
         
     }    
 }

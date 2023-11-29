@@ -3,41 +3,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package pokebatalla;
-import pokebatalla.pookemones.Bullbasaur;
-import pokebatalla.pookemones.Charmander;
-import pokebatalla.pookemones.Clefable;
-import pokebatalla.pookemones.PonytadeGalar;
-import pokebatalla.pookemones.Squirtle;
+
+import pokebatalla.model.battels.Batalla;
+import pokebatalla.model.battels.Entrenador;
+import pokebatalla.pokemons.Bullbasaur;
+import pokebatalla.pokemons.Charmander;
+import pokebatalla.pokemons.Clefable;
+import pokebatalla.pokemons.PonytadeGalar;
+import pokebatalla.pokemons.Squirtle;
 
 /**
  *
  ** @author Hannia Dinora Gonzalez Magaña
  */
 public class MAIN {
+
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello PokeBatalla!");
-        
-        Charmander charmanderSalvaje = new Charmander() ;
-        Clefable clefableSalvaje = new Clefable() ;
-        PonytadeGalar ponytadegalarSalvaje = new PonytadeGalar() ;
-        Squirtle squirtleSalvaje = new Squirtle() ;
-        Bullbasaur bullbasaurSalvaje = new Bullbasaur() ;
-        
-        System.out.println("->Charmander se encuentra con un Clefable y ataca");
-        charmanderSalvaje.atacar(clefableSalvaje, Charmander.Movimientos.ATAQUE_RAPIDO);
-        
-        System.out.println("->Clefable se molesta y responde ");
-        clefableSalvaje.atacar(charmanderSalvaje, Clefable.Movimientos.PSIQUICO);
-     
-        System.out.println("->Bullbasaur se enoja porque atacaron a su amigo Chamander y...");
-        bullbasaurSalvaje.atacar(clefableSalvaje, Bullbasaur.Movimientos.LATIGO);
-        
-        System.out.println("->Ponyta de Galar se encuentra con un Squirtle y ataca");
-        ponytadegalarSalvaje.atacar(squirtleSalvaje, PonytadeGalar.Movimientos.CONFUSION);
-    }
-    }
-    
 
-    
+        Charmander charmanderSalvaje = new Charmander();
+        Clefable clefableSalvaje = new Clefable();
+        PonytadeGalar ponytadegalarSalvaje = new PonytadeGalar();
+        Squirtle squirtleSalvaje = new Squirtle();
+        Bullbasaur bullbasaurSalvaje = new Bullbasaur();
 
+        Entrenador en1 = new Entrenador("Jose");
+        en1.capturarPokemon(squirtleSalvaje);
+        en1.capturarPokemon(charmanderSalvaje);
+        
+        Entrenador en2 = new Entrenador("Juanita");
+        en2.capturarPokemon(clefableSalvaje);
+        en2.capturarPokemon(ponytadegalarSalvaje);
+        
+        Batalla b = new Batalla(en1, en2);
+                b.desarrollarBatalla();
+    }
+}
