@@ -4,6 +4,7 @@
  */
 package moves;
 
+import java.io.Serializable;
 import pokemons.Pokemon;
 
 /**
@@ -12,7 +13,7 @@ import pokemons.Pokemon;
  * @author Fatima Gutierrez Moreno
  * 
  */
-public class MovimientoEstado extends Movimiento {
+public class MovimientoEstado extends Movimiento implements Serializable{
 
     @Override
     public void utilizar(Pokemon usuario, Pokemon objetivo) {
@@ -42,6 +43,9 @@ public class MovimientoEstado extends Movimiento {
                          this.getClass().getSimpleName() + " a " +  
                          objetivo.getClass().getSimpleName() + " y causa danio de " +
                          danio);
+        if(objetivo.getHp()<0){
+            objetivo.setHp(0);
+        }
         System.out.println("El objetivo quedo asi: " + objetivo);  
     }    
     

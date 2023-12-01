@@ -4,6 +4,7 @@
  */
 package pokemons;
 
+import java.io.Serializable;
 import moves.Movimiento;
 import moves.PsycoRayo;
 
@@ -11,7 +12,7 @@ import moves.PsycoRayo;
  *
  * @author fatima gtz
  */
-public class Psyduck extends Pokemon {
+public class Psyduck extends Pokemon implements Serializable{
 
     public enum Movimientos {
         PSICORAYO

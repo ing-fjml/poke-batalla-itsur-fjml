@@ -5,6 +5,7 @@
 package pokemons;
 
 
+import java.io.Serializable;
 import moves.Ataque_Ala;
 import moves.Espejo;
 import moves.Furia_Dragon;
@@ -16,7 +17,7 @@ import moves.Movimiento;
  *
  * @author Fatima Gutierrez Moreno
  */
-public class Dragonite extends Pokemon {
+public class Dragonite extends Pokemon implements Serializable {
      
     public enum Movimientos {
         Furia_Dragon,

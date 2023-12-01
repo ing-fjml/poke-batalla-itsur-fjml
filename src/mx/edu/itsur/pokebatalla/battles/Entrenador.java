@@ -4,6 +4,7 @@
  */
 package battles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import pokemons.Pokemon;
@@ -13,7 +14,7 @@ import pokemons.Pokemon;
  *
  * @author fatima gutierrez moreno
  */
-public class Entrenador {
+public class Entrenador implements Serializable {
     String nombre;
     List<Pokemon> pokemonsAgregados;
     Pokemon pokemonActual;

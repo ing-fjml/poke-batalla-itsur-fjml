@@ -4,14 +4,16 @@
  */
 package pokemons;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Fatima Gutierrez Moreno
  */
-public abstract class Pokemon {
+public abstract class Pokemon implements Serializable{
 //Atributos
     protected String tipo;
-    protected String nombre;
+    public  String nombre;
     protected int nivel;
     protected int hp;
     protected int ataque;
@@ -20,6 +22,30 @@ public abstract class Pokemon {
     protected int xp; 
     
     Pokemon() {
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public double getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(double precision) {
+        this.precision = precision;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
     }
 
     //Getters
@@ -58,6 +84,10 @@ public abstract class Pokemon {
     public int getHp() { 
         return hp;
         
+    }
+    
+    public void setHp(int x){
+        this.hp=x;
     }
 
 

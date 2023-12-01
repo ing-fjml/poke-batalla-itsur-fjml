@@ -5,6 +5,7 @@
 package pokemons;
 
 
+import java.io.Serializable;
 import moves.Danza_Petalo;
 import moves.Espora;
 import moves.Movimiento;
@@ -17,7 +18,7 @@ import moves.Picotazo_Veneno;
  *
  * @Fatima Gutierrez Moreno
  */
-public class Oddish extends Pokemon{
+public class Oddish extends Pokemon implements Serializable{
   
     public enum Movimientos {
         Danza_Petalo,

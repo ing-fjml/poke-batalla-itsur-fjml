@@ -6,6 +6,7 @@
 package pokemons;
 
 
+import java.io.Serializable;
 import moves.Burbuja;
 import moves.Cascada;
 import moves.Movimiento;
@@ -18,7 +19,7 @@ import moves.Refugio;
  *
  * @author Fatima Gutierrez Moreno
  */
-public class Squirtle extends Pokemon {
+public class Squirtle extends Pokemon implements Serializable {
    
     public enum Movimientos {
        Burbuja,

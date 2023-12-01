@@ -4,6 +4,7 @@
  */
 package pokemons;
 
+import java.io.Serializable;
 import moves.AtaqueRapido;
 import moves.Latigo;
 import moves.Movimiento;
@@ -12,7 +13,7 @@ import moves.Movimiento;
  *
  * @author Fatima Gutierrez Moreno
  */
-public class Bullbasaur extends Pokemon {
+public class Bullbasaur extends Pokemon implements Serializable {
     
     public enum Movimientos {
         ATAQUE_RAPIDO,

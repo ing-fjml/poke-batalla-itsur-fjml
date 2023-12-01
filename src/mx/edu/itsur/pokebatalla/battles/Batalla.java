@@ -27,11 +27,10 @@ public class Batalla implements Serializable{
         this.entrenador1 = entrenador1;
         this.entrenador2 = entrenador2;
     }    
-    
-    public void guardarBatalla () {
-       FileManager.guardarHaciaArchivo (this);
-
+    public void GuardarBatalla(){
+        FileManager.guardarHaciaArchivo(this);
     }
+    
     public void desarrollarBatalla() {
         System.out.println("⊹⊹⊹⊹⊹⊹⊹⊹ LA BATALLA POR LA SUPERVIVENCIA DARA INICIO⊹⊹⊹⊹⊹⊹⊹ :) ");
         System.out.println("LOS CONTRINCANTES  SERAN LOS SIGUIENTES: ");
@@ -47,6 +46,11 @@ public class Batalla implements Serializable{
                         + entrenador1.getPokemonsCapturados().size() 
                         + " Elige alguno de ellos");
                 entrenador1.setPokemonActual(null);
+            }catch (Exception e) {
+                System.out.println("CUENTAS CON LOS SIGUIENTES POKEMONES:  " 
+                        + entrenador1.getPokemonsCapturados().size() 
+                        + " Elige alguno de ellos");
+                entrenador1.setPokemonActual(null);
             }
         } while (entrenador1.getPokemonActual() == null);
 
@@ -54,6 +58,11 @@ public class Batalla implements Serializable{
             try {
                 eligeUnPokemon(entrenador2);
             } catch (IndexOutOfBoundsException e) {
+                System.out.println("CUENTAS CON LOS SIGUIENTES POKEMONES: " 
+                        + entrenador2.getPokemonsCapturados().size() 
+                        + "Elige alguno de ellos");
+                entrenador2.setPokemonActual(null);
+            } catch (Exception e) {
                 System.out.println("CUENTAS CON LOS SIGUIENTES POKEMONES: " 
                         + entrenador2.getPokemonsCapturados().size() 
                         + "Elige alguno de ellos");
@@ -78,12 +87,19 @@ public class Batalla implements Serializable{
                     entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
                 cambiarDePokemon(entrenadorEnTurno);
             }
-            while (entrenadorEnTurno.getPokemonActual() == null || 
-                    entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
-                    System.out.println("!STOP¡ No des un paso más,"
-                            + " deves cambiar tu pokemon actual por otro ya que debe descansar!!!");
-                    cambiarDePokemon(entrenadorEnTurno);
-                }
+            
+            seleccionaUnAtaque(entrenadorEnTurno, oponente.getPokemonActual());
+            if (entrenadorEnTurno.getPokemonActual() == null || entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
+                System.out.println("El pokemon " +entrenadorEnTurno.getPokemonActual().nombre+ 
+                        " no puede seguir en la batalla porque ha sido derrotado.");
+                cambiarDePokemon(entrenadorEnTurno);
+            }
+//            while (entrenadorEnTurno.getPokemonActual() == null || 
+//                    entrenadorEnTurno.getPokemonActual().getHp() <= 0) {
+//                    System.out.println("!STOP¡ No des un paso más,"
+//                            + " deves cambiar tu pokemon actual por otro ya que debe descansar!!!");
+//                    cambiarDePokemon(entrenadorEnTurno);
+//                }
 
             if (oponente.estaDerrotado()) {
                 System.out.println("El entrenador " + oponente.getNombre() + 
@@ -91,7 +107,7 @@ public class Batalla implements Serializable{
             System.out.println(" ⊹⊹⊹⊹⊹⊹⊹ A LLEGADO A SU FIN ESTA  PELEA POR LA SUPERVIVENCIA⊹⊹⊹⊹⊹⊹⊹  ");
             batallaFinalizada = true;
             } else {
-                
+                GuardarBatalla();
                 turno = (turno == 1) ? 2 : 1;
             }
         }
@@ -117,6 +133,8 @@ public class Batalla implements Serializable{
             auxLectura = (char) System.in.read();
             System.in.read((new byte[System.in.available()]));
         } catch (IOException ex) {
+           ex.printStackTrace();
+        } catch (Exception ex) {
            ex.printStackTrace();
         }
              System.out.println("♡♡♡♡♡♡♡♡♡");
@@ -162,6 +180,9 @@ public class Batalla implements Serializable{
         }catch (NumberFormatException ex) {
             System.out.println("¿Serías tan amable de ingresar un numero que si pueda ser valido? "
                     + ". Reintentar otra vez :) ");
+        } catch (Exception ex) {
+            System.out.println("¿Serías tan amable de ingresar un numero que si pueda ser valido? "
+                    + ". Reintentar otra vez :) ");
         }
     }
         ent.instruirMovimientoAlPokemonActual(oponente, escAtaque - 1);
@@ -177,6 +198,10 @@ public class Batalla implements Serializable{
             System.in.read((new byte[System.in.available()]));
             break;
         } catch (IOException ex) {
+            System.out.println("Hubo una equivocacion  de entrada o salida al intentar leer."
+                    + " Reintentar otra vez :).");
+            ex.printStackTrace();
+        } catch (Exception ex) {
             System.out.println("Hubo una equivocacion  de entrada o salida al intentar leer."
                     + " Reintentar otra vez :).");
             ex.printStackTrace();
@@ -200,6 +225,8 @@ public class Batalla implements Serializable{
                 auxLectura = (char) System.in.read();
                 System.in.read((new byte[System.in.available()]));
             } catch (IOException ex) {
+                ex.printStackTrace();
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
            int pokemonNew = Character.getNumericValue(auxLectura) - 1;
