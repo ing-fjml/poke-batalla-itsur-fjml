@@ -4,7 +4,7 @@
  */
 package pokemons;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import moves.AtaqueRapido;
 import moves.Impactrueno;
 import moves.Latigo;
@@ -14,7 +14,7 @@ import moves.Movimiento;
  *
  * @author Fatima Gutierrez Moreno
  */
-public class Pikachu extends Pokemon implements Serializable{
+public class Pikachu extends Pokemon{
 
     /**
      * Movimientos que puede realizar el Pokémon

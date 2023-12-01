@@ -4,7 +4,7 @@
  */
 package pokemons;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import moves.AtaqueRapido;
 import moves.Grunido;
 import moves.Movimiento;
@@ -13,7 +13,7 @@ import moves.Movimiento;
  *
  * @author Fatima GUtierrez Moreno
  */
-public class Charmander extends Pokemon implements Serializable{
+public class Charmander extends Pokemon {
 
     /**
      * Movimientos que puede realizar el Pokémon

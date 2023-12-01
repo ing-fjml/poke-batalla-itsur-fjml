@@ -4,7 +4,7 @@
  */
 package moves;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import pokemons.Pokemon;
 
 /**
@@ -13,7 +13,7 @@ import pokemons.Pokemon;
  * @author Fatima Gutierrez Moreno
  * 
  */
-public class MovimientoEstado extends Movimiento implements Serializable{
+public class MovimientoEstado extends Movimiento {
 
     @Override
     public void utilizar(Pokemon usuario, Pokemon objetivo) {

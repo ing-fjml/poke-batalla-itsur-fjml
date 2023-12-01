@@ -4,7 +4,7 @@
  */
 package moves;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import pokemons.Pokemon;
 
 /**
@@ -16,7 +16,7 @@ import pokemons.Pokemon;
  * 
  * @author Fatima Gutierrez Moreno
  */
-public abstract class Movimiento implements Serializable {
+public abstract class Movimiento  {
 
     enum TiposDeMovimiento {
         //Primera Generación
