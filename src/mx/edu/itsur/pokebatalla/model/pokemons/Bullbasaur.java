@@ -7,13 +7,19 @@ package mx.edu.itsur.pokebatalla.model.pokemons;
 import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
 import mx.edu.itsur.pokebatalla.model.moves.Latigo;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
+import java.io.Serializable;
 
 /**
  *
  * @author FJML1983
  */
+<<<<<<< Updated upstream
 public class Bullbasaur extends Pokemon {
     
+=======
+public class Bullbasaur extends Pokemon implements Serializable {
+
+>>>>>>> Stashed changes
     public enum Movimientos {
         ATAQUE_RAPIDO,
         LATIGO
