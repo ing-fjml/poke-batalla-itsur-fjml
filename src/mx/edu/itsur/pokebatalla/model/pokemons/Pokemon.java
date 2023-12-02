@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author FJML1983
+ * @author Brayan Eduardo González Parra-
  */
 public abstract class Pokemon implements Serializable {
 

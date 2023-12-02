@@ -4,7 +4,7 @@
  */
 package mx.edu.itsur.pokebatalla.model.pokemons;
 
-import mx.edu.itsur.pokebatalla.model.moves.Gruñido;
+import mx.edu.itsur.pokebatalla.model.moves.Grunido;
 import mx.edu.itsur.pokebatalla.model.moves.Ácido;
 import mx.edu.itsur.pokebatalla.model.moves.Picotazoveneno;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
@@ -62,7 +62,7 @@ public class Ekans extends Pokemon implements Serializable {
                 instanciaMovimiento = new Picotazoveneno();
                 break;
             case GRUÑIDO:
-                instanciaMovimiento = new Gruñido();
+                instanciaMovimiento = new Grunido();
                 break;
             case ÁCIDO:
                 instanciaMovimiento = new Ácido();
