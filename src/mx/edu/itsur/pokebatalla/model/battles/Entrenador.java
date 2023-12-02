@@ -7,30 +7,27 @@ package mx.edu.itsur.pokebatalla.model.battles;
 import java.util.ArrayList;
 import java.util.List;
 import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
+import java.io.Serializable;
 
 /**
  *
- * @author FJML1983
+ * @author Brayan Eduardo González Parra-
  */
-public class Entrenador {
+public class Entrenador implements Serializable {
 
-    //3a Atributos
     protected String nombre;
     protected List<Pokemon> pokemonsCapturados;
     protected Pokemon pokemonActual;
 
-    //3b Constructor
     public Entrenador(String nombre) {
         this.nombre = nombre;
         pokemonsCapturados = new ArrayList<>();
     }
 
-    //3c Metodos
     public void capturarPokemon(Pokemon pk) {
         pokemonsCapturados.add(pk);
     }
 
-    //Instruir movimiento 
     public void instruirMovimientoAlPokemonActual(Pokemon oponente, int ordinalMovimiento)
     {
         this.pokemonActual.atacar(oponente, ordinalMovimiento);

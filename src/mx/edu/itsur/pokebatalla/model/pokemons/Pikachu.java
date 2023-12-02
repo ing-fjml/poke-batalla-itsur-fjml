@@ -8,12 +8,13 @@ import mx.edu.itsur.pokebatalla.model.moves.AtaqueRapido;
 import mx.edu.itsur.pokebatalla.model.moves.Impactrueno;
 import mx.edu.itsur.pokebatalla.model.moves.Latigo;
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
+import java.io.Serializable;
 
 /**
  *
  * @author FJML1983
  */
-public class Pikachu extends Pokemon {
+public class Pikachu extends Pokemon implements Serializable {
 
     /**
      * Movimientos que puede realizar el Pokémon

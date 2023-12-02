@@ -6,12 +6,13 @@ package mx.edu.itsur.pokebatalla.model.pokemons;
 
 import mx.edu.itsur.pokebatalla.model.moves.Movimiento;
 import mx.edu.itsur.pokebatalla.model.moves.PsycoRayo;
+import java.io.Serializable;
 
 /**
  *
  * @author FJML1983
  */
-public class Psyduck extends Pokemon {
+public class Psyduck extends Pokemon implements Serializable {
 
     public enum Movimientos {
         PSICORAYO
