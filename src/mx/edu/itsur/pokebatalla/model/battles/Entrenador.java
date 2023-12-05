@@ -1,82 +1,69 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package mx.edu.itsur.pokebatalla.model.battles;
-
-import java.util.ArrayList;
+import java.io.Serializable;
 import java.util.List;
-import mx.edu.itsur.pokebatalla.model.pokemons.Pokemon;
-
+import mx.edu.itsur.pokebatalla.model.Pokemons.Pokemon;
+import java.util.ArrayList;
 /**
- *
- * @author Francisco Gonzalez Regalado
+ *@author Francisco gonzalez Regalado
  */
+public class Entrenador implements Serializable{
+    //Atributos
 
-public class Entrenador {
-
-
-   
-
-    //3a Atributos
-
-    protected String nombre;
     protected List<Pokemon> pokemonsCapturados;
-    protected Pokemon pokemonActual;
-
-
-
-    //3b Constructor
+    protected String nombre;
+    protected Pokemon PokemonActual;
 
     public Entrenador(String nombre) {
         this.nombre = nombre;
-        pokemonsCapturados = new ArrayList<>();
+        this.pokemonsCapturados = new ArrayList<>();
     }
 
-    //3c Metodos
-
+    //Metodos
     public void capturarPokemon(Pokemon pk) {
         pokemonsCapturados.add(pk);
     }
-
-
- 
-
-    //Instruir movimiento 
-
-    public void instruirMovimientoAlPokemonActual(Pokemon oponente, int ordinalMovimiento)
+    
+    public void IntruirMovimientoActualAlPokemon(Pokemon Oponenete, int OrdinalMoviento)
     {
-        this.pokemonActual.atacar(oponente, ordinalMovimiento);
-    }
-
-
-    //Devuelve true cuando todos los Pokemon del entrenador esten Debilitados
-
-    public boolean estaDerrotado() 
-    {
-        int sumaHP = 0;
-        for (Pokemon pokemon : pokemonsCapturados) {
-            sumaHP += pokemon.getHp();
+        if(PokemonActual == null)
+        {
+            System.out.println("NO HAY UN POKEMON ACTUAL");
+            return;
         }
         
-        return (sumaHP <= 0);
+        if(OrdinalMoviento < 0 || OrdinalMoviento >= PokemonActual.getMovimientos().length)
+        {
+            System.out.println("EL ORDINAL MOVIMIENTO NO ES VALIDO");
+            return;
+        }
+        this.PokemonActual.atacar(Oponenete, OrdinalMoviento);
+    }
+    
+public boolean estaDerrotado() {
+        for (Pokemon pokemon : pokemonsCapturados) {
+
+            if (pokemon.gethp() > 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    //Getters y Setters
-    public String getNombre(){
+    // Getters y Setters
+    public String getNombre() {
         return nombre;
     }
 
-    public Pokemon getPokemonActual(){
-        return this.pokemonActual;
+  public Pokemon getPokemonActual() {
+        return PokemonActual;
     }
 
-    public void setPokemonActual(Pokemon p){
-        this.pokemonActual = p;
+    public void setPokemonActual(Pokemon p) {
+        this.PokemonActual = p;
     }
 
-    public List<Pokemon> getPokemonsCapturados(){
-        return this.pokemonsCapturados;
-    }    
-    
+    public List<Pokemon> getPokemonsCapturados() {
+        return pokemonsCapturados;
+    }
+   
 }
