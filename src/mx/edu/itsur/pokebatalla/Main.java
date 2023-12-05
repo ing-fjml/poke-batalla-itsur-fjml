@@ -1,43 +1,54 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package mx.edu.itsur.pokebatalla;
 
+
+import mx.edu.itsur.pokebatalla.model.Pokemons.Aerodactyl;
+import mx.edu.itsur.pokebatalla.model.Pokemons.Charmander;
+import mx.edu.itsur.pokebatalla.model.Pokemons.Dratini;
+import mx.edu.itsur.pokebatalla.model.Pokemons.Evee;
+import mx.edu.itsur.pokebatalla.model.Pokemons.Pikachu;
 import mx.edu.itsur.pokebatalla.model.battles.Batalla;
 import mx.edu.itsur.pokebatalla.model.battles.Entrenador;
-import mx.edu.itsur.pokebatalla.model.pokemons.Bullbasaur;
-import mx.edu.itsur.pokebatalla.model.pokemons.Pikachu;
-import mx.edu.itsur.pokebatalla.model.pokemons.Charmander;
+import mx.edu.itsur.pokebatalla.moves.ControladorArchivos.FileManajer;
 
 /**
- *
- * @author FJML1983
+@author Francisco gonzalez Regalado
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        System.out.println("Hello PokeBatalla!");
+        System.out.println("¡BIENVENIDO A LA POKEBATALLA!");
         
-        //Instanciar pokemons
-        Pikachu pika = new Pikachu();
-        Charmander charm = new Charmander();
-        Bullbasaur bullb = new Bullbasaur();
+      
         
-        //Instanciar entrenadores y que capturen pokemons
-        Entrenador ent1 = new Entrenador("Hannia");
-        ent1.capturarPokemon(pika);
-        ent1.capturarPokemon(bullb);
+        
+        Pikachu pikachuSalvaje = new Pikachu();
+        Charmander charmanderSalvaje = new Charmander() ;       
+        Evee PokemonEve1 = new Evee("Eve");
+        Aerodactyl PokemonAero1 = new Aerodactyl("Aero");
+        Dratini PokemonDra1 = new   Dratini("DRA");
+        Charmander PokemonChar1 = new Charmander("Char");
+        
+        Entrenador n1 = new Entrenador("ASH");
+        n1.capturarPokemon(PokemonDra1);
+        n1.capturarPokemon(PokemonChar1);
+        Entrenador n2 = new Entrenador("RED");
+        n2.capturarPokemon(PokemonEve1);
+        n2.capturarPokemon(PokemonAero1);
+        
+        
+        Batalla v = null;
+        
+        Batalla batallaguardada = FileManajer.leerPartida();
+        
+        if(batallaguardada != null){
+            
+        v = batallaguardada;
 
-        Entrenador ent2 = new Entrenador("Stacy");
-        ent2.capturarPokemon(charm);
+        }else{
+            v = new Batalla(n1,n2);
         
-        //Instanciar batalla e iniciarla.
-        Batalla b = new Batalla(ent1, ent2);
-        b.desarrollarBatalla();
+        }
+        v.desarrollarBatalla();
         
     }
     
